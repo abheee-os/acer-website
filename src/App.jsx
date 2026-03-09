@@ -5,7 +5,10 @@ import './App.css'
 import acerlogo from "./images/logo-acer.avif"
 import HeroSlider from "./components/HeroSlider"
 import CategorySlider from './components/CategorySlider'
-
+import windows11 from "./images/Banner_Windows11.avif"
+import pc from "./images/PCGamePass_2.png"
+import vero from "./images/vero-family.png"
+import windows from "./images/Windows-11-Pro_1.png"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -58,7 +61,7 @@ function App() {
 
 {/*center*/}        
 
-<div className='h-14 flex justify-center items-center flex-1'>
+<div className='h-14 lg:flex justify-center items-center flex-1 hidden'>
   <ul className='flex text-center text-xl gap-10 '>
     <li>Store</li>
     <li>AI</li>
@@ -90,6 +93,222 @@ function App() {
 
       <CategorySlider />
 
+      <div className='w-full h-15 bg-white flex justify-center items-center text-center mt-10 '>
+        <h1 className='text-4xl font-semibold'>Discover More with Acer</h1> 
+
+      </div>
+
+      <div className='w-full mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-8 gap-10 px-16'>
+        
+        <div>
+          <img src={windows11} alt="" />
+          <h2 className=' text-xl font-semibold mt-4'>Windows 11</h2>
+          <p className='mt-1'>Introducing Windows 11</p>
+          <p className='mt-7 text-green-700 font-semibold'>Learn More</p>
+        </div>
+
+        <div>
+          <img src={pc} alt="" />
+          <h2 className=' text-xl font-semibold mt-4'>PC GAME PASS</h2>
+          <p className='mt-1'>Three-month trial included with your new Acer laptop.</p>
+          <p className='mt-7 text-green-700 font-semibold'>Learn More</p>
+        </div>
+
+        <div>
+          <img src={vero} alt="" />
+          <h2 className=' text-xl font-semibold mt-4'>Acer Vero</h2>
+          <p className='mt-1'>Green PC Products</p>
+          <p className='mt-7 text-green-700 font-semibold'>Learn More</p>
+        </div>
+
+        <div>
+          <img src={windows} alt="" />
+          <h2 className=' text-xl font-semibold mt-4'>Windows 11 Pro</h2>
+          <p className='mt-1'>Windows 11 Pro for Acer business laptops</p>
+          <p className='mt-7 text-green-700 font-semibold'>Learn More</p>
+        </div>
+
+
+      </div>
+      
+      <button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="w-full py-4 bg-gray-200 text-center font-medium"
+>
+  Back To Top
+</button>
+
+{/* footer grid section */}
+<div className='bg-gray-100 w-full py-5'>
+
+  <div className='w-full hidden lg:grid grid-cols-4 gap-10 '>
+
+    <div className='px-16'>
+       <h3 className="text-2xl font-semibold mb-4">Products</h3>
+      <ul className='space-y-4 text-lg'>
+        <li>Laptops</li>
+        <li>Desktops</li>
+        <li>Acer Chromebooks</li>
+        <li>Tablet and Phones</li>
+        <li>Monitors</li>
+        <li>Projectors</li>
+        <li>Digital Signage</li>
+        <li>Electronics & Accessories</li>
+        <li>Networking</li>
+        <li>eMobility</li>
+        <li>Handheld Gaming</li>
+        <li>Appliances</li>
+        <li>Sustainable Products</li>
+      </ul>
+    </div>
+
+     <div>
+      <h3 className="text-2xl font-semibold mb-4">Support</h3>
+      <ul className="space-y-3 text-lg">
+        <li>Acer ID</li>
+        <li>Register a Product</li>
+        <li>Acer Community</li>
+        <li>Drivers and Manuals</li>
+        <li>Acer Answers</li>
+        <li>Contact Support</li>
+      </ul>
+    </div>
+
+     <div>
+      <h3 className="text-2xl font-semibold mb-4">Resources</h3>
+      <ul className="space-y-3 text-lg">
+        <li>Acer Corner</li>
+        <li>Acer Global Account Portal</li>
+        <li>Find a Store</li>
+        <li>Acer Technologies</li>
+        <li>McAfee</li>
+      </ul>
+    </div>
+
+
+     <div>
+      <h3 className="text-2xl font-semibold mb-4">About Acer</h3>
+      <ul className="space-y-3 text-lg">
+        <li>Contact Us</li>
+        <li>Investor Relations</li>
+        <li>Press</li>
+        <li>Awards</li>
+        <li>Events</li>
+      </ul>
+
+      <div className='py-12'>
+        <h3 className="text-2xl font-semibold mb-4">Sustainability</h3>
+        <ul className="space-y-3 text-lg">
+        <li>Corporate Social Responsibility</li>
+        <li>Product Carbon Footprint</li>
+        <li>Project Humanity</li>
+        <li>Earthion</li>
+        
+      </ul>
+        
+      </div>
+
+
+    </div>
+
+    
+
+
+
+
+  </div>
+
+  <div className="w-full lg:hidden">
+
+  <details className="">
+    <summary className="flex justify-between items-center pl-4 py-4 font-medium cursor-pointer">
+      Products
+      <span>⌄</span>
+    </summary>
+
+    <ul className="bg-white pl-4 pb-4 pt-3 space-y-3 text-sm">
+      <li>Laptops</li>
+        <li>Desktops</li>
+        <li>Acer Chromebooks</li>
+        <li>Tablet and Phones</li>
+        <li>Monitors</li>
+        <li>Projectors</li>
+        <li>Digital Signage</li>
+        <li>Electronics & Accessories</li>
+        <li>Networking</li>
+        <li>eMobility</li>
+        <li>Handheld Gaming</li>
+        <li>Appliances</li>
+        <li>Sustainable Products</li>
+    </ul>
+  </details>
+
+  <details className="">
+    <summary className="flex justify-between items-center pl-4 py-4 font-medium cursor-pointer">
+      Support
+      <span>⌄</span>
+    </summary>
+
+    <ul className=" bg-white pt-3 pl-4 pb-4 space-y-3 text-sm">
+     <li>Acer ID</li>
+        <li>Register a Product</li>
+        <li>Acer Community</li>
+        <li>Drivers and Manuals</li>
+        <li>Acer Answers</li>
+        <li>Contact Support</li>
+    </ul>
+  </details>
+
+
+  <details className="">
+    <summary className="flex justify-between items-center pl-4 py-4 font-medium cursor-pointer">
+      Resources
+      <span>⌄</span>
+    </summary>
+
+    <ul className=" bg-white pt-3 pl-4 pb-4 space-y-3 text-sm">
+       <li>Acer Corner</li>
+        <li>Acer Global Account Portal</li>
+        <li>Find a Store</li>
+        <li>Acer Technologies</li>
+        <li>McAfee</li>
+    </ul>
+  </details>
+
+
+  <details className="">
+    <summary className="flex justify-between items-center pl-4 py-4 font-medium cursor-pointer">
+    About Acer
+      <span>⌄</span>
+    </summary>
+
+    <ul className=" bg-white pt-3 pl-4 pb-4 space-y-3 text-sm">
+      <li>Acer ID</li>
+      <li>Register a Product</li>
+      <li>Acer Community</li>
+    </ul>
+  </details>
+
+  <details className="">
+    <summary className="flex justify-between items-center pl-4 py-4 font-medium cursor-pointer">
+   Sustainability
+      <span>⌄</span>
+    </summary>
+
+    <ul className=" bg-white pt-3 pl-4 pb-4 space-y-3 text-sm">
+      <li>Corporate Social Responsibility</li>
+        <li>Product Carbon Footprint</li>
+        <li>Project Humanity</li>
+        <li>Earthion</li>
+    </ul>
+  </details>
+
+</div>
+
+
+
+ <div className="w-[95%] mx-auto border-t border-gray-300 mt-5 lg:mt-15 "></div>
+</div>
       
     </>
   )
