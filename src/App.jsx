@@ -93,12 +93,15 @@ function App() {
 
       <CategorySlider />
 
-      <div className='w-full bg-white flex justify-center items-center text-center mt-10 py-6'>
-        <h1 className='text-2xl  sm:text-5xl font-semibold'>Discover More with Acer</h1> 
+   <div className="px-6 md:px-16">
 
-      </div>
+  <div className="flex justify-center text-center mt-10 py-6">
+    <h1 className="text-3xl md:text-5xl font-semibold">
+      Discover More with Acer
+    </h1>
+  </div>
 
-      <div className='w-full mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-8 gap-10 px-16'>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-8">
         
         <div>
           <img src={windows11} alt="" />
@@ -128,7 +131,7 @@ function App() {
           <p className='mt-7 text-green-700 font-semibold'>Learn More</p>
         </div>
 
-
+</div>
       </div>
       
       <button
