@@ -5,6 +5,7 @@ import projectors from "../images/projectors.avif"
 import acerChromebooks from "../images/acer-chromebooks.avif"
 import graphicCards from "../images/graphic-cards.avif"
 
+
 export default function CategorySlider() {
 
   const items = [
@@ -20,9 +21,9 @@ export default function CategorySlider() {
     <div className="w-full py-20 bg-gray-100 text-center">
 
       {/* Title */}
-      <h2 className="text-4xl font-semibold mb-16">
-        Browse Popular Categories
-      </h2>
+      <h1 className="text-3xl sm:text-5xl font-semibold mb-16 ">
+        Browse Popular<br className="sm:hidden" />  Categories
+      </h1>
 
       {/* Horizontal Scroll Row */}
   <div className="w-full overflow-x-auto lg:overflow-visible">
@@ -48,14 +49,7 @@ export default function CategorySlider() {
   </div>
 </div>
 
-      {/* Progress Bar (only mobile + tablet) */}
-      <div className="mt-16 flex justify-center lg:hidden">
-        <div className="w-[300px] h-[3px] bg-gray-300 relative">
-
-          <div className="absolute left-0 top-0 h-full w-[100px] bg-black"></div>
-
-        </div>
-      </div>
+      
 
     </div>
   )

@@ -93,8 +93,8 @@ function App() {
 
       <CategorySlider />
 
-      <div className='w-full h-15 bg-white flex justify-center items-center text-center mt-10 '>
-        <h1 className='text-4xl font-semibold'>Discover More with Acer</h1> 
+      <div className='w-full bg-white flex justify-center items-center text-center mt-10 py-6'>
+        <h1 className='text-2xl  sm:text-5xl font-semibold'>Discover More with Acer</h1> 
 
       </div>
 
@@ -133,7 +133,7 @@ function App() {
       
       <button
   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="w-full py-4 bg-gray-200 text-center font-medium"
+  className="w-full py-4 mt-7 bg-gray-200 text-center font-medium"
 >
   Back To Top
 </button>
