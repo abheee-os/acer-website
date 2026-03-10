@@ -7,13 +7,52 @@ import video2 from "../images/video2.mp4"
 
 export default function HeroSlider() {
 
-  const slides = [
-    { type: "video", src: video1 },
-    { type: "image", src: image1 },
-    { type: "image", src: image2 },
-    { type: "video", src: video2 }
-  ]
+ const slides = [
+  {
+    type: "video",
+    src: video1,
+    subtitle: "Acer Aspire 3D 15 SpatialLabs™ Edition",
+    title: "Dive into the Depths of Immersive 3D",
+    desc: "",
+    textColor: "text-white",
+    button1: "Explore",
+    buttonStyle: "bg-green-500 text-black"
+  },
 
+  {
+    type: "image",
+    src: image1,
+    subtitle: "Acer Swift Edge 14 AI",
+    title: "Light as a Feather, Swift as an Arrow",
+    desc: "",
+    textColor: "text-white",
+    button1: "Explore",
+    buttonStyle: "bg-green-500 text-black"
+  },
+
+  {
+    type: "image",
+    src: image2,
+    subtitle: "Acer Aspire 14 AI | Acer Aspire 16 AI",
+    title: "Explore. Evolve. Aspire.",
+    desc: "Copilot+ PCs are the fastest, most intelligent Windows PCs ever.",
+    textColor: "text-white",
+    button1: "Copilot+ PC",
+    button2: "Learn More",
+    buttonStyle: "bg-green-500 text-black"
+  },
+
+  {
+    type: "video",
+    src: video2,
+    subtitle: "",
+    title: "Smarter. Faster. Acer.",
+    desc: "Meet our 2026 lineup of AI PCs and more!",
+    textColor: "text-white",
+    button1: "Explore",
+    buttonStyle: "bg-white text-black"
+  }
+]
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
@@ -63,29 +102,45 @@ export default function HeroSlider() {
       ))}
 
       {/* OVERLAY CONTENT */}
-      <div className="absolute left-16 top-1/2 -translate-y-1/2 text-black max-w-[500px]">
-        <p className="text-lg mb-3">
-          Acer Aspire 14 AI | Acer Aspire 16 AI
-        </p>
+<div
+  className={`absolute left-6 lg:left-25 md:left-16 top-20 md:top-1/2 md:-translate-y-1/2 w-[90%] md:max-w-[500px] ${slides[current].textColor}`}
+>
+  {/* subtitle */}
+  <p className="text-sm md:text-base lg:text-lg mb-2 md:mb-3">
+    {slides[current].subtitle}
+  </p>
 
-        <h1 className="text-6xl font-bold mb-5 leading-tight">
-          Explore. Evolve. Aspire.
-        </h1>
+  {/* title */}
+  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-5">
+    {slides[current].title}
+  </h1>
 
-        <p className="text-xl mb-6">
-          Copilot+ PCs are the fastest, most intelligent Windows PCs ever.
-        </p>
+  {/* description */}
+  {slides[current].desc && (
+    <p className="text-sm md:text-lg lg:text-xl mb-5 md:mb-6 max-w-[420px]">
+      {slides[current].desc}
+    </p>
+  )}
 
-        <div className="flex gap-4">
-          <button className="bg-green-500 text-white px-6 py-3 rounded-full font-semibold">
-            Copilot+ PC
-          </button>
+  {/* buttons */}
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
 
-          <button className="bg-white px-6 py-3 rounded-full font-semibold">
-            Learn More
-          </button>
-        </div>
-      </div>
+  {slides[current].button1 && (
+    <button
+      className={`w-fit px-5 md:px-6 py-2.5 md:py-3 rounded-full font-semibold ${slides[current].buttonStyle}`}
+    >
+      {slides[current].button1}
+    </button>
+  )}
+
+  {slides[current].button2 && (
+    <button className="w-fit bg-white text-black px-5 md:px-6 py-2.5 md:py-3 rounded-full font-semibold">
+      {slides[current].button2}
+    </button>
+  )}
+
+</div>
+</div>
 
       {/* LEFT ARROW */}
       <button
